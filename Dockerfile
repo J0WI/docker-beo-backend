@@ -1,16 +1,17 @@
-FROM python:3.5-jessie
+FROM python:3.5-slim-buster
 
 RUN set -ex; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
-	libfreetype6-dev \
-	libjpeg62-turbo-dev \
-	liblcms2-dev \
-	libtiff5-dev \
-	libwebp-dev \
-	tcl8.6-dev \
-	tk8.6-dev \
-	zlib1g-dev \
+		git \
+		libfreetype6-dev \
+		libjpeg62-turbo-dev \
+		liblcms2-dev \
+		libtiff5-dev \
+		libwebp-dev \
+		tcl8.6-dev \
+		tk8.6-dev \
+		zlib1g-dev \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
